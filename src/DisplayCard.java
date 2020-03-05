@@ -14,6 +14,7 @@ public class DisplayCard extends Application {
 
         Random random = new Random();
 
+        //choosing cards
         int card1 = random.nextInt(52) + 1;//random number 1-52
         imageView1 = new ImageView(new Image("/image/pics/" + card1 + ".png"));////images are named numbers 1-52
 
@@ -25,7 +26,7 @@ public class DisplayCard extends Application {
         while(card3 == card1||card3 == card2){card3 = random.nextInt(52) + 1;} //makes sure cards are different
         imageView3 = new ImageView(new Image("/image/pics/" + card3 + ".png"));
 
-        //set sizes
+        //set image sizes
         imageView1.setFitHeight(100);
         imageView2.setFitHeight(100);
         imageView3.setFitHeight(100);

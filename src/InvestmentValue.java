@@ -31,7 +31,6 @@ public class InvestmentValue extends Application {
 
         //action when calculate button is pressed
         calculate.setOnAction(e -> {
-            //button pressed
             //calculate investment value
             float ftvalue = (float) (Float.valueOf(investment.getText()) *
                     Math.pow((1 + (Float.valueOf(interest.getText()))/100/12), Float.valueOf(years.getText()) * 12));

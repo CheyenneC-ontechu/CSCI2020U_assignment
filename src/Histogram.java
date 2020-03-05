@@ -27,6 +27,13 @@ public class Histogram extends Application {
 
         view.setOnAction(e -> {
             try {
+                //clear any previous data
+                gc.clearRect(0,0,500,500);
+                for (int i = 0; i < letters.length; i++) {
+                    letters[i] = 0;
+                }
+                
+                //read data
                 File file = new File(filename.getText());
                 Scanner input = new Scanner(file);
                 while(input.hasNext()) {
