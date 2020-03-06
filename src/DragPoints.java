@@ -13,7 +13,7 @@ public class DragPoints extends Application {
     public void start(Stage stage) throws Exception {
         Pane pane = new Pane();
         pane.setPadding(new Insets(100,100,100,100));
-        //make circle
+        //make main circle
         Circle circle = new Circle(200 ,200,100);
         circle.setFill(null);
         circle.setStroke(Color.BLACK);
@@ -107,8 +107,7 @@ public class DragPoints extends Application {
      */
     private void setNewValues(Line[] line, Text[] angles, Circle[] points) {
         for (int i = 0; i < 3; i++) {
-            //if line is
-            int ind = i == 2 ? 0 : (i+1);
+            int ind = i == 2 ? 0 : (i+1); //needed to prevent NullPointerException
             line[i].setStartX(points[i].getCenterX());
             line[i].setEndX(points[ind].getCenterX());
             line[i].setStartY(points[i].getCenterY());
